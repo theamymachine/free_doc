@@ -12,6 +12,7 @@ require 'faker'
 array_p = []
 array_d = []
 array_c = []
+array_s = []
 
 10.times{
   c = City.create!(name: Faker::Address.city)
@@ -26,6 +27,16 @@ array_c = []
   array_p << p
   array_d << d
 }
+
+10.times{
+  s = Specialty.create!(name: Faker::Educator.subject)
+  array_s << s
+ }
+
+ 10.times{
+  Expertise.create!(doctor: array_d.sample, specialty: array_s.sample)
+  }
+
 
 20.times{
   appointment = Appointment.create!(date: Faker::Date.between(from: Date.today, to: 6.months.from_now) , patient: array_p.sample, doctor: array_d.sample, city: array_c.sample)

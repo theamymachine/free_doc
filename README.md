@@ -1,24 +1,13 @@
-# README
+# Projet Freedoc
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ceci est une application Rails similaire à Doctolib : FreeDoc.
 
-Things you may want to cover:
+Pour la lancer il faudra :
+Ruby version 2.5.1
+Rails version 5.2.3 
 
-* Ruby version
+La database est fournie par des fake sourcés sur https://github.com/faker-ruby/faker.
+A modifier dans le fichier db/seed.rb si besoin. 
+L’application est composée de bases de données représentant les docteurs et leurs spécialités, les patients, les rendez-vous et leurs villes.  
+Pour s’en servir, modifier ou regarder les tables BDD grâce à la console Rails.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
