@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+
+10.times{
+  p = Patient.create!(first_name: Faker::Superhero.name)
+  d = Doctor.create!(first_name: Faker::Movies::LordOfTheRings.character)
+  array_p =[]
+  array_d =[]
+  array_p << p
+  array_d << d
+}
+
+10.times{
+  appointment = Appointment.create!(date: Faker::Date.between(from: Date.today, to: 6.months.from_now) , patient: array_p.sample, doctor: array_d.sample)
+ }
